@@ -4,11 +4,13 @@ Hello, Trainer! Welcome to the Creature Trainer! In this world, you will encount
 
 ## Compilation Instructions
 
-In order to run the game, first clone the repository to your desired directory. Once you `cd` into the directory, run `make`. This will use g++ to compile all the `.cpp` files and create an output file named `creatureTrainer`. All of this is defined in the `Makefile` included in the project.
+In order to run the game, first clone the repository to your desired directory. Once you `cd` into the directory, run `make` in the terminal. This will use g++ to compile all the `.cpp` files and create an output file named `creatureTrainer`. All of this is defined in the `Makefile` included in the project.
+
+After you run `make`, run `./creatureTrainer` to start the game.
 
 You can edit the Makefile and change this output filename to whatever you would prefer by modifying the existing `-o creatureTrainer` at the end of the compile command to `-o <Insert Your Preferred Filename>`.
 
-For example, if you wanted to name the output file to "Pokemon", you would edit the Makefile to contain `g++ main.cpp Party.cpp PrintHelper.cpp Creature.cpp Item.cpp Battle.cpp CreatureType.cpp EECSRandom.cpp Trainer.cpp -o Pokemon`.
+For example, if you wanted to name the output file to "Pokemon", you would edit the Makefile to contain `g++ main.cpp Party.cpp PrintHelper.cpp Creature.cpp Item.cpp Battle.cpp CreatureType.cpp EECSRandom.cpp Trainer.cpp -o Pokemon`. In this case, you would then run `./Pokemon` to start the game.
 
 **Attention**: If you remove any of the `.cpp` files from the g++ command in the `Makefile`, the program will not run correctly. Furthermore, the `make` command is strict about what it needs to run commands. *Spacing is important*. If you must edit the `Makefile`, be sure to only change the output filename and nothing else.
 
