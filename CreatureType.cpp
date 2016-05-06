@@ -20,7 +20,7 @@ const string CreatureType::CREATURE_NAMES[] = { "Axolotyl", "Bittern", "C-lacant
 const string CreatureType::ELEMENT_NAMES[] = { "Air", "Bombast", "Cool", "Dark",
 "Earth", "Funk", "Gamma", "Hammer" };
 
-std::vector<CreatureType> CreatureType::TYPES = {};
+std::vector<CreatureType> CreatureType::TYPES;
 
 CreatureType::CreatureType() {
     // Do nothing

@@ -122,7 +122,7 @@ int Creature::getXp() {
     return xp;
 }
 
-//POSSIBLY DELETE
+// POSSIBLY DELETE
 void Creature::setXp(int num) {
     xp = num;
 }
@@ -144,12 +144,12 @@ bool Creature::updateXP(){
 }
 
 bool Creature::updateLevel(){
-    //level maxes out at 9
+    // level maxes out at 9
     if(level < 9){
         ++level;
-        //POSSIBLY UPDATE CURRENT HEALTH
+        // POSSIBLY UPDATE CURRENT HEALTH
         healthMax += getCreatureType().getHealthMaxPerLevel();
-        //attack stats update handled in getAttackStrength()
+        // attack stats update handled in getAttackStrength()
         return true;
     }
     return false;

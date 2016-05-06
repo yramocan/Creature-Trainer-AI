@@ -11,12 +11,12 @@
 
 using namespace std;
 
-//to run a battle
-//we need a trainer,
-//their party,
-//the situation stream,
-//and their win count
-//the battle is a series of informative outputs of situations
+// to run a battle
+// we need a trainer,
+// their party,
+// the situation stream,
+// and their win count
+// the battle is a series of informative outputs of situations
 void runBattle(Trainer &player1, Party &party, Item &items, stringstream& ss,
                int winCount, int& moveCount, int& illegalMoveCount){
     
@@ -31,7 +31,7 @@ void runBattle(Trainer &player1, Party &party, Item &items, stringstream& ss,
     }
     enemy = Creature::factory( tNum, EECSRandom::range(0, maxLevel + 1) );
 
-    //This simply introduces the enemy. The trainer can make the first move.
+    // This simply introduces the enemy. The trainer can make the first move.
     PrintHelper::printHR(ss);
     PrintHelper::printWinCount(winCount, ss);
     ss << "\nA new challenger approaches...\n";
@@ -82,7 +82,7 @@ void runBattle(Trainer &player1, Party &party, Item &items, stringstream& ss,
     
     if (party.alive()) {
         // Enemy just fainted
-        //If you defeat an enemy, you regenerate some health and pick up an item
+        // If you defeat an enemy, you regenerate some health and pick up an item
         ss << "\nYou have defeated the Enemy ";
         ss << enemy.getTypeName(0) << "! Congratulations!\n";
         
@@ -122,7 +122,7 @@ void runBattle(Trainer &player1, Party &party, Item &items, stringstream& ss,
         ss  << "Trainer, make your move.\n"
         << "(s#-Swap to slot #, r-Rest, item code, or Collar(co#)): ";
         
-        // we get a player move as above, but the only legal moves are now i and n
+        // We get a player move as above, but the only legal moves are now i and n
         playerMove = player1.makeMove(ss);
         moveCount++;
         

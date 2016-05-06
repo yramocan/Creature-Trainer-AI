@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  CreatureTrainer
-//
-//  Created by Jeremy Gibson on 11/4/14.
-//  Copyright (c) 2014 Jeremy Richard Gibson. All rights reserved.
-//
-
 #include <iostream>
 #include <vector>
 #include <sstream>

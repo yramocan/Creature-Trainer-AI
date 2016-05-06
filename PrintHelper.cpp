@@ -1,9 +1,8 @@
 #include <iostream>
 #include "PrintHelper.h"
-//#include "Item.h"
 
 void PrintHelper::printIntro(stringstream & ss) {
-    ss << "Hello, Trainer! Welcome to the world of EECS 183 Creature Trainer!\n";
+    ss << "Hello, Trainer! Welcome to the Creature Trainer!\n";
     ss << "In this world, you will encounter many different creatures in battle.\n";
     ss << "It is up to you to compete and unravel the mysteries of these creatures.\n";
     ss << "The challenge is one that cannot be faced alone. In order to succeed, \n";
@@ -53,26 +52,8 @@ void PrintHelper::printTeamStatus(Creature creatures[], int currCreatureIndex, s
 }
 
 void PrintHelper::printItems(const Item& item, stringstream& ss) {
-    /*
-    ss  << ": POTION " << formatItemCount(item.getItemCount(1))
-        << " : SHIELD " << formatItemCount(item.getItemCount(2))
-        << " : DMG-BOOST " << formatItemCount(item.getItemCount(3))
-        << " : REVIVE " << formatItemCount(item.getItemCount(4))
-        << " : LASSO " << formatItemCount(item.getItemCount(5)) << " :\n"
-        << ": S-A " << formatItemCount(item.getItemCount(6))
-        << " : S-B " << formatItemCount(item.getItemCount(7))
-        << " : S-C " << formatItemCount(item.getItemCount(8))
-        << " : S-D " << formatItemCount(item.getItemCount(9))
-        << " : S-E " << formatItemCount(item.getItemCount(10))
-        << " : S-F " << formatItemCount(item.getItemCount(11))
-        << " : S-G " << formatItemCount(item.getItemCount(12))
-        << " : S-H " << formatItemCount(item.getItemCount(13)) << " :\n";
-    */
     stringstream sst;
     
-//    string headings[] = { "! Potion:", "! Shield:", "! Dmg-Boost:", "! Revive:",
-//        "! Lasso:", "!\n! Scrolls      ! S-A:", "! S-B:", "! S-C:", "! S-D:",
-//        "! S-E:", "! S-F:", "! S-G:", "! S-H:" };
     string headings[Item::NUM_ITEMS];
     for (int i=0; i<Item::NUM_ITEMS; i++) {
         if (i<5) {
@@ -83,9 +64,7 @@ void PrintHelper::printItems(const Item& item, stringstream& ss) {
             headings[i] = "! "+Item::ITEM_CODES[i]+":";
         }
     }
-//    = { "! Potion(po):", "! Shield(sh):", "! Enrage(en):", "! Revive(re):",
-//        "! Lasso(la):", "!\n! Scrolls      ! sa:", "! sb:", "! sc:", "! sd:",
-//        "! se:", "! sf:", "! sg:", "! sh:" };
+
     int paddings[] = { 15, 16, 16, 16, 16, 25, 8, 8, 8, 8, 8, 8, 8 };
     
     printHR(ss);
